@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/mustache.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/eldiez.js"></script>
+</head>
+<body>
+	<header class="navBar">
+		<h2 class="title" id="itemName"></h2>
+		<div class="leftBtns">
+			<a class="iconBtn" href="#" onclick="history.go(-1);return false;"><i class="i-arrow-left"></i></a>
+		</div>
+	</header>
+	<section class="content lista" id="items">
+		<!--style="top: 50px;margin-bottom: 100px;"-->
+		<div class="loading" id="loader"><img src="img/loading.gif"/></div>
+		<script type="text/template" id="platilloTemplate">
+		{{#vino}}
+		{{#categoria}}
+			<div class="categoria">
+			<header>{{nombre}}<span>{{criterio}}</span></header>
+			{{#platillo}}
+			<figure class="item vinos" id="item{{id}}" style="display: block;">
+				<figcaption>
+					<h2 id="nombre">{{nombre}}</h2>
+					<h3 id="precio">${{precio}}</h3>
+					{{#contenido}}
+					<div class="crece" style="display: block">
+						<hr/>
+						{{#descripcion}}
+						<div class="col1">
+							{{#imagen}}<img class="{{seccion}}" src="http://198.1.89.58//~appel10/el10/menu/{{.}}">{{/imagen}}
+						</div>
+						<div class="col2">
+							<p class="maridaje">{{maridaje}}</p>
+							<div id="descripcion">
+								<p><strong>Vista:</strong> {{{vista}}}</p>
+								<p><strong>Nariz:</strong> {{{nariz}}}</p>
+								<p><strong>Boca:</strong> {{{boca}}}</p>
+							</div>
+						</div>
+						{{/descripcion}}
+						{{^descripcion}}
+						<div class="colfull">
+							{{#imagen}}<img class="{{seccion}}" src="http://198.1.89.58//~appel10/el10/menu/{{.}}">{{/imagen}}
+						</div>
+						{{/descripcion}}
+					</div>
+					{{/contenido}}
+				</figcaption>
+			</figure>
+			{{/platillo}}
+			</div>
+		{{/categoria}}
+		{{/vino}}
+		
+		{{#bebida}}
+		{{#categoria}}
+			<div class="categoria">
+				{{^cafeteria}}<header>{{nombre}}</header>{{/cafeteria}}
+				{{#platillo}}
+				<figure class="item bar" id="item{{id}}" style="display: block;">
+					<figcaption>
+						<h2 id="nombre">{{nombre}}</h2>
+						<h3 id="precio">${{precio}}</h3>
+					</figcaption>
+				</figure>
+				{{/platillo}}
+			</div>
+		{{/categoria}}
+		{{/bebida}}
+		
+		{{#cortes}}
+		{{#categoria}}
+			<div class="categoria">
+				{{#mostrar}}<header>{{nombre}}</header>{{/mostrar}}
+				{{#platillo}}
+				{{^personalizacion}}
+				<figure class="item platillo" id="item{{id}}" style="display: block; ">
+					<figcaption>
+						<h2 id="nombre">{{nombre}}</h2>
+						<p id="descripcion">{{descripcion}}</p>
+						{{#precio_p}}
+						<h3 id="precio"><span>1/4</span> ${{precio}}</h3>
+						<hr class="vert"/>
+						<h3 id="precio"><span>1/2</span> ${{precio_p}}</h3>
+						{{/precio_p}}
+						{{^precio_p}}
+						<h3 id="precio">${{precio}}</h3>
+						{{/precio_p}}
+					</figcaption>
+					<div class="crece" style="display: block">
+						{{#imagen}}
+						<div class="imagen {{seccion}}" style="background-image:url('http://198.1.89.58//~appel10/el10/menu/{{.}}')"></div>
+						{{/imagen}}
+					</div>
+				</figure>
+				{{/personalizacion}}
+				{{#personalizacion}}
+				<figure class="item personalizacion">
+					<div class="todito">
+						<figcaption>
+							<h2 id="nombre">{{nombre}}</h2>
+							<h3 id="precio">${{precio}}</h3>
+							{{#imagen}}
+							<div class="crece" style="display: block">
+								<div class="imagen {{seccion}}" style="background-image:url('http://198.1.89.58//~appel10/el10/menu/{{.}}')"></div>
+							</div>
+							{{/imagen}}
+						</figcaption>
+					</div>
+				</figure>
+				{{/personalizacion}}
+				{{/platillo}}
+			</div>
+		{{/categoria}}
+		{{/cortes}}
+		
+		{{^especial}}
+		{{#categoria}}
+			{{#platillo}}
+			{{^personalizacion}}
+			<figure class="item platillo" id="item{{id}}" style="display: block;">
+				<figcaption>
+					<h2 id="nombre">{{nombre}}</h2>
+					<p id="descripcion">{{descripcion}}</p>
+					{{#precio_p}}
+					<h3 id="precio"><span>1/4</span> ${{precio}}</h3>
+					<hr class="vert"/>
+					<h3 id="precio"><span>1/2</span> ${{precio_p}}</h3>
+					{{/precio_p}}
+					{{^precio_p}}
+					<h3 id="precio">${{precio}}</h3>
+					{{/precio_p}}
+				</figcaption>
+				<div class="crece" style="display: block">
+					{{#imagen}}
+					<div class="imagen {{seccion}}" style="background-image:url('http://198.1.89.58//~appel10/el10/menu/{{.}}')"></div>
+					{{/imagen}}
+				</div>
+			</figure>
+			{{/personalizacion}}
+			{{#personalizacion}}
+			<figure class="item personalizacion">
+				<div class="todito">
+					<figcaption>
+						<h2 id="nombre">{{nombre}}</h2>
+						<p id="descripcion">{{descripcion}}</p>
+						<h3 id="precio">${{precio}}</h3>
+						{{#imagen}}
+						<div class="crece" style="display: block">
+							<div class="imagen {{seccion}}" style="background-image:url('http://198.1.89.58//~appel10/el10/menu/{{.}}')"></div>
+						</div>
+						{{/imagen}}
+					</figcaption>
+				</div>
+			</figure>
+			{{/personalizacion}}
+			{{/platillo}}
+		{{/categoria}}
+		{{/especial}}
+		</script>
+	</section>
+	<footer class="tabBar">
+		<nav>
+			<ul>
+				<li>
+					<a class="selected" href="index.html" data-transition="slide-in" data-direction="reverse">
+						<i class="i-carta"></i><br><label>Carta</label>
+					</a>
+				</li>
+				<li>
+					<a class="" href="sucursales.html" data-transition="slide-in">
+						<i class="i-map"></i><label>Sucursales</label>
+					</a>
+				</li>
+				<li>
+		            <a class="" href="pedidos.html">
+		                <i class="i-phone"></i>
+		                <label>Pedidos</label>
+		            </a>
+	          	</li>
+				<li>
+					<a class="" href="mas.html" data-transition="slide-in">
+						<i class="i-mas"></i><label>Más</label>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+</body>
+</html>

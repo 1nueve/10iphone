@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>El 10</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/eldiez.js"></script>
+</head>
+
+<body>
+    <div class="screen">
+        <div></div>
+    </div>
+
+    <div class="cover" id="cover">
+        <!-- NAVBAR toggle -->
+        <header class="navBar">
+            <h2 class="title">Sucursales</h2>
+            <div class="leftBtns">
+                <a class="iconBtn ui-link hide" href="#" data-transition="slide" data-direction="reverse" onclick="history.go(-1);return false;">
+                    <i class="i-arrow-left"></i>
+                </a>
+            </div>
+            <div class="rightBtns toggleView hide">
+                <a class="iconBtn selected" id="verLista" data-transition="none">
+                    <i class="i-lista"></i>
+                </a>
+                <a class="iconBtn" id="verMapa" data-transition="none">
+                    <i class="i-mapita"></i>
+                </a>
+            </div>
+        </header>
+        <section class="content lista" id="sucursales">
+            <!--style="height: 1750px; top:50px;"-->
+            <div class="item" id="claveria" data-name="Clavería">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>Clavería</h2>
+                    <p>Av. Clavería 30, Esq. Floresta
+                        <br>Col. Clavería</p>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=19.465605605612797,-99.1864339">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+            <div class="item" id="condesaI" data-name="Condesa I">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>Condesa I</h2>
+                    <p>Alfonso Reyes 66
+                        <br>Col. Condesa</p>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=19.410310,-99.179735">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+            <div class="item" id="condesaII" data-name="Condesa II">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>Condesa II</h2>
+                    <p>Benjamín Hill 187
+                        <br>Col. Condesa</p>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=19.4069665,-99.17575">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+            <div class="item" id="lomas" data-name="Lomas de Chapultepec">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>Lomas</h2>
+                    <p>Prado Norte 450
+                        <br>Col. Lomas de Chapultepec</p>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=19.427100005600774,-99.2113048">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+            <div class="item" id="metepec" data-name="Metepec">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>Metepec</h2>
+                    <p>Av. Leona Vicario 349 Poniente
+                        <br>Metepec</p>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=19.2616935,-99.6118302">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+            <div class="item" id="mundoE" data-name="Mundo E">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>Mundo E</h2>
+                    <p>C.C. Mundo E</p>
+                    <br/>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=19.525333,-99.226842">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+            <div class="item" id="parquesPolanco" data-name="Parques Polanco">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>Parques Polanco</h2>
+                    <p>C.C. Parques Polanco
+                        <br>Col. Anahuac</p>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=19.440194,-99.184399">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+            <div class="item" id="playa" data-name="Playa del Carmen">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>Playa del Carmen</h2>
+                    <p>Quinta Avenida, Esq. Calle 30
+                        <br>Playa del Carmen, Quintana Roo</p>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=20.632804,-87.068142">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+            <div class="item" id="roma" data-name="Roma">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>Roma</h2>
+                    <p>Álvaro Obregón 112 Local A, Esq. Orizaba
+                        <br>Col. Roma</p>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=19.418042805597956,-99.15994330000001">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+            <div class="item" id="sanAngel" data-name="San Ángel">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>San Ángel</h2>
+                    <p>Av. de la Paz 14
+                        <br>Col. San Ángel</p>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=19.347326,-99.187949">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+            <div class="item" id="santaFe" data-name="Santa Fe">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>Santa Fe</h2>
+                    <p>C.C. Santa Fe</p>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=19.361883,-99.273555">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+            <div class="item" id="tabacalera" data-name="Tabacalera">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>Tabacalera</h2>
+                    <p>Av. Reforma, Esq. Calle Paris
+                        <br>Col. Tabacalera</p>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=19.432335,-99.156796">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+            <div class="item" id="tlalnepantla" data-name="Tlalnepantla">
+                <a class="verFicha" href="#cover" data-transition="slide-in">
+                    <h2>Tlalneplantla</h2>
+                    <p>Av. Sor Juana Inés de la Cruz 101
+                        <br>Col. Tlalnepantla</p>
+                    <i class="i-arrow-right"></i>
+                </a>
+                <a class="llevame" href="maps://maps.apple.com/?q=19.5388217,-99.2001439">
+                    <i class="i-map-alt"></i>
+                    <label class="cta">Ver Mapa</label>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <section class="content subpage" id="info">
+        <header class="navBar">
+            <h2 class="title" id="itemName"></h2>
+            <div class="leftBtns">
+                <a class="iconBtn" href="#" onclick="history.go(-1);return false;">
+                    <i class="i-arrow-left"></i>
+                </a>
+                <a class="iconBtn" data-transition="none">
+                    <i class="i-arrow-left hide"></i>
+                </a>
+            </div>
+            <div class="rightBtns toggleView">
+                <a class="iconBtn" id="verLista" data-transition="none">
+                    <i class="i-share hide"></i>
+                </a>
+                <a class="iconBtn selected" id="verGaleria" data-transition="none">
+                    <i class="i-share hide"></i>
+                </a>
+            </div>
+        </header>
+        <section class="content" id="sucursales-info">
+            <div id="condesaI-info" class="ficha" data-name="Condesa I">
+                <figure>
+                    <a href="http://youtu.be/k7yRMW96zJA" class="browserExternal"></a>
+                    <figcaption>
+                        <h3>Horarios de servicio:</h3>
+                        <ul class="horario">
+                            <li>Domingo a Jueves 13:00 a 00:00 hrs</li>
+                            <li>Viernes y Sábado de 13:00 a 01:00 hrs</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:55530734" ><i class="icon-phone-1"></i> 5553 0734</a>
+                    <p><span class="blueSpan">PEDIDOS A DOMICILIO:</span> </p>
+                    <div class="doble">
+                        <a href="tel:52789910"><i class="icon-phone-1"></i><span class="mbl"> POR</span> TELÉFONO</a>
+                        <a class="browserExternal" href="https://entrega.com.mx/dom/r/diezcon.html?m=sucursal;su_id=15"><i class="icon-desktop"></i> EN LÍNEA</a>
+                    </div>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=19.410310,-99.179735" target="_blank">Ver Mapa</a>
+                </div>
+            </div>
+            <div id="condesaII-info" class="ficha" data-name="Condesa II">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=iYGameavOS8" class="browserExternal"></a>
+                    <figcaption>
+                        <h3>Horarios de servicio:</h3>
+                        <ul class="horario">
+                            <li>Sábado a Jueves 13:00 a 23:30 hrs</li>
+                            <li>Viernes de 13:00 a 00:00 hrs</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:52762616" ><i class="icon-phone-1"></i> 5276 2616</a>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=19.4069665,-99.17575" target="_blank">Ver Mapa</a>
+                </div>
+            </div> 
+            <div id="claveria-info" class="ficha">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=zv9o2IWJfdA" class="browserExternal"></a>
+                    <figcaption>
+                        <h3>Horarios de servicio:</h3>
+                        <ul class="horario">
+                            <li>Lunes a Jueves 13:00 a 00:00 hrs</li>
+                            <li>Viernes y Sábado de 13:00 a 01:00 hrs</li>
+                            <li>Domingo 13:00 a 23:00 hrs</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:53863740" ><i class="icon-phone-1"></i> 5386 3740</a>
+                    <p><span class="blueSpan">PEDIDOS A DOMICILIO:</span> </p>
+                    <div>
+                        <a href="tel:52789910"><i class="icon-phone-1"></i><span class="mbl"> POR</span> TELÉFONO</a>
+                    </div>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=19.465605605612797,-99.1864339" target="_blank">Ver Mapa</a>
+                </div>
+            </div>
+            <div id="lomas-info" class="ficha">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=8Z-pWGHOYAY" class="browserExternal"></a>
+                    <figcaption>
+
+                        <h3>Horarios de servicio:</h3>
+                        <ul class="horario">
+                            <li>Lunes a Jueves de 13:00 a 00:00 hrs</li>
+                            <li>Viernes y Sábado 13:00 a 01:00 hrs</li>
+                            <li>Domingo de 13:00 a 23:00 hrs</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:55403408" ><i class="icon-phone-1"></i> 5540 3408</a>
+                    <p><span class="blueSpan">PEDIDOS A DOMICILIO:</span> </p>
+                    <div class="doble">
+                        <a href="tel:52789910"><i class="icon-phone-1"></i><span class="mbl"> POR</span> TELÉFONO</a>
+                        <a class="browserExternal" href="https://entrega.com.mx/dom/r/diezcon.html?m=sucursal;su_id=37"><i class="icon-desktop"></i> EN LÍNEA</a>
+                    </div>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=19.427100005600774,-99.2113048" target="_blank">Ver Mapa</a>
+                </div>
+            </div>
+            <div class="ficha" id="metepec-info">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=8bNXgHMaBy4" class="browserExternal"></a>
+                    <figcaption>
+                        <h3>Horarios de servicio:</h3>
+                        <ul class="horario">
+                            <li>Domingo a Miércoles a 13:00 a 22:00 hrs</li>
+                            <li>Jueves y Sábado 13:00 a 23:00 hrs</li>
+                            <li>Viernes 13:00 a 01:00 hrs</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:7222322438" ><i class="icon-phone-1"></i> 7222322438</a>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=19.410310,-99.179735" target="_blank">Ver Mapa</a>
+                </div>
+            </div>
+            <div class="ficha" id="mundoE-info">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=J_rX1gxL0qw" class="browserExternal"></a>
+                    <figcaption>
+                        <h3>Horarios de servicio:</h3>
+                        <ul class="horario">
+                            <li>Domingo a Jueves de 13:00 a 22:00 hrs</li>
+                            <li>Viernes de 13:00 a 23:00 hrs</li>
+                            <li>Sábado de 13:00 a 22:00 hrs</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:53669410" ><i class="icon-phone-1"></i> 5366 9410</a>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=19.525333,-99.226842" target="_blank">Ver Mapa</a>
+                </div>
+            </div>
+            <div class="ficha" id="parquesPolanco-info">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=kap35rL5-H8" class="browserExternal"></a>
+                    <figcaption>
+                        <h3>Horarios de servicio:</h3>
+                        <ul class="horario">
+                            <li>Domingo a Jueves 13:00 a 00:00 hrs</li>
+                            <li>Viernes y Sábado de 13:00 a 01:00 hrs</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:52501365" ><i class="icon-phone-1"></i> 5250 1365</a>
+                    <p><span class="blueSpan">PEDIDOS A DOMICILIO:</span> </p>
+                    <div class="doble">
+                        <a href="tel:52789910"><i class="icon-phone-1"></i><span class="mbl"> POR</span> TELÉFONO</a>
+                        <a class="browserExternal" href="https://entrega.com.mx/dom/r/diezcon.html?m=sucursal;su_id=36"><i class="icon-desktop"></i> EN LÍNEA</a>
+                    </div>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=19.440194,-99.184399" target="_blank">Ver Mapa</a>
+                </div>
+            </div>
+            <div class="ficha" id="playa-info">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=L9J2qf-a9q0" class="browserExternal" </a>
+                        <figcaption>
+                            <h3>Horarios de servicio:</h3>
+                            <ul class="horario">
+                                <li>Lunes a Domingo de 13:00 a 00:00 hrs</li>
+                            </ul>
+                        </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:9848035418" ><i class="icon-phone-1"></i> 9848035418</a>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=20.632804,-87.068142" target="_blank">Ver Mapa</a>
+                </div>
+            </div>
+            <div class="ficha" id="roma-info">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=2HT1gzZgJY0" class="browserExternal"></a>
+                    <figcaption>
+                        <h3>Horarios de servicio:</h3>
+                        <ul class="horario">
+                            <li>Domingo a Jueves 13:00 a 00:00 hrs</li>
+                            <li>Viernes y Sábado de 13:00 a 01:00 hrs</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:52642636" ><i class="icon-phone-1"></i> 5264 2636</a>
+                    <p><span class="blueSpan">PEDIDOS A DOMICILIO:</span> </p>
+                    <div class="doble">
+                        <a href="tel:52789910"><i class="icon-phone-1"></i><span class="mbl"> POR</span> TELÉFONO</a>
+                        <a class="browserExternal" href="https://entrega.com.mx/dom/r/diezcon.html?m=sucursal;su_id=38"><i class="icon-desktop"></i> EN LÍNEA</a>
+                    </div>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=19.418042805597956,-99.15994330000001" target="_blank">Ver Mapa</a>
+                </div>
+            </div>
+            <div class="ficha" id="sanAngel-info">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=PXQ8dAmMO9Y" class="browserExternal"></a>
+                    <figcaption>
+                        <h3>Horarios de servicio:</h3>
+                        <ul class="horario">
+                            <li>Domingo a Jueves 13:00 a 00:00 hrs</li>
+                            <li>Viernes y Sabado de 13:00 a 01:00 hrs</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:56162496" ><i class="icon-phone-1"></i> 5616 2496</a>
+                    <p><span class="blueSpan">PEDIDOS A DOMICILIO:</span> </p>
+                    <div class="doble">
+                        <a href="tel:52789910"><i class="icon-phone-1"></i><span class="mbl"> POR</span> TELÉFONO</a>
+                        <a class="browserExternal" href="https://entrega.com.mx/dom/r/diezcon.html?m=sucursal;su_id=35"><i class="icon-desktop"></i> EN LÍNEA</a>
+                    </div>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=19.347326,-99.187949" target="_blank">Ver Mapa</a>
+                </div>
+            </div>
+            <div class="ficha" id="santaFe-info">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=DBaAv8y9qdc" class="browserExternal"></a>
+                    <figcaption>
+                        <h3>Horarios de servicio:</h3>
+                        <ul class="horario">
+                            <li>Sábado a Jueves de 13:00 a 22:00 hrs</li>
+                            <li>Viernes de 13:00 a 23:00 hrs</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:21674320" ><i class="icon-phone-1"></i> 2167 4320</a>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=19.361883,-99.273555" target="_blank">Ver Mapa</a>
+                </div>
+            </div>
+            <div class="ficha" id="tabacalera-info">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=CTmXtySz6S0" class="browserExternal"></a>
+                    <figcaption>
+                        <h3>Horarios de servicio:</h3>
+                        <ul class="horario">
+                            <li>Lunes a Jueves de 13:00 a 00:00 hrs</li>
+                            <li>Viernes y Sabado 13:00 a 01:00 hrs</li>
+                            <li>Domingo de 13:00 a 23:00 hrs</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:57054621" ><i class="icon-phone-1"></i> 5705 4621</a>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=19.432335,-99.156796" target="_blank">Ver Mapa</a>
+                </div>
+            </div>
+            <div class="ficha" id="tlalnepantla-info">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=qGiQHq7QCcM" class="browserExternal"></a>
+                    <figcaption>
+                        <h3>Horarios de servicio:</h3>
+                        <ul class="horario">
+                            <li>Domingo a Martes 13.00 a 19:00 hrs</li>
+                            <li>Sábado, Miércoles y Jueves 13:00 a 22:00 hrs</li>
+                            <li>Viernes 13:00 a 23:00 hrs</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <div class="sucursalPedido">
+                    <p>RESERVACIONES: </p>
+                    <a class="reservacion" href="tel:53906184" ><i class="icon-phone-1"></i> 5390 6184</a>
+                </div>
+                <div class="sucursalPedido nomargen">
+                    <a class="llegar" href="maps://maps.apple.com/?q=19.5388217,-99.2001439" target="_blank">Ver Mapa</a>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- TABBAR app -->
+    <footer class="tabBar">
+        <nav>
+            <ul>
+                <li>
+                    <a class="" href="index.html" data-transition="slide-in" data-direction="reverse">
+                        <i class="i-carta"></i>
+                        <br>
+                        <label>Carta</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="selected" href="sucursales.html">
+                        <i class="i-map"></i>
+                        <label>Sucursales</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="" href="pedidos.html">
+                        <i class="i-phone"></i>
+                        <label>Pedidos</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="" href="mas.html" data-transition="slide-in">
+                        <i class="i-mas"></i>
+                        <label>Más</label>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</

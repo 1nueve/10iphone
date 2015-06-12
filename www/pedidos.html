@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>El 10</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/eldiez.js"></script>
+</head>
+
+<body>
+    <div class="screen">
+        <div></div>
+    </div>
+
+    <div >
+        <!-- NAVBAR toggle -->
+        <header class="navBar">
+            <h2 class="title">Pedidos a domicilio</h2>
+            <div class="leftBtns">
+                <a class="iconBtn ui-link hide" href="#" data-transition="slide" data-direction="reverse" onclick="history.go(-1);return false;">
+                    <i class="i-arrow-left"></i>
+                </a>
+            </div>
+            <div class="rightBtns toggleView hide">
+                <a class="iconBtn selected" id="verLista" data-transition="none">
+                    <i class="i-lista"></i>
+                </a>
+                <a class="iconBtn" id="verMapa" data-transition="none">
+                    <i class="i-mapita"></i>
+                </a>
+            </div>
+        </header>
+        <section class="content lista" id="pedidos">
+
+            <div class="sucursalPedido">
+                <h2>Clavería</h2>
+                <a href="tel:5278 9910"><i class="icon-phone-1"></i> <span class="mbl">POR </span>TELÉFONO</a>
+                <!-- <a href="tel:53863740"><i class="icon-phone-1"></i> 5386 3740</a> -->
+            </div>
+            <div class="sucursalPedido doble">
+                <h2>Condesa I</h2>
+                <!-- <a href="tel:55530734"><i class="icon-phone-1"></i> 5553 0734</a> -->
+                <div class="doble">
+                    <a href="tel:5278 9910"><i class="icon-phone-1"></i> <span class="mbl">POR </span>TELÉFONO</a>
+                    <a class="browserExternal" href="https://entrega.com.mx/dom/r/diezcon.html?m=sucursal;su_id=15"><i class="icon-desktop"></i> EN LÍNEA</a>
+                </div>
+            </div>
+            <div class="sucursalPedido">
+                <h2>Roma</h2>
+                <!-- <a href="tel:52642636"><i class="icon-phone-1"></i> 5264 2636</a> -->
+                <div class="doble">
+                    <a href="tel:5278 9910"><i class="icon-phone-1"></i> <span class="mbl">POR </span>TELÉFONO</a>
+                    <a class="browserExternal" href="https://entrega.com.mx/dom/r/diezcon.html?m=sucursal;su_id=38"><i class="icon-desktop"></i> EN LÍNEA</a>
+                </div>
+            </div>
+            <div class="sucursalPedido">
+                <h2>Parques Polanco</h2>
+                <!-- <a href="tel:52501365"><i class="icon-phone-1"></i> 5250 1365</a> -->
+                <div class="doble">
+                    <a href="tel:5278 9910"><i class="icon-phone-1"></i> <span class="mbl">POR </span>TELÉFONO</a>
+                    <a class="browserExternal" href="https://entrega.com.mx/dom/r/diezcon.html?m=sucursal;su_id=36"><i class="icon-desktop"></i> EN LÍNEA</a>
+                </div>
+            </div>
+            <div class="sucursalPedido">
+                <h2>San Ángel</h2>
+                <div class="doble">
+                    <a href="tel:5278 9910"><i class="icon-phone-1"></i> <span class="mbl">POR </span>TELÉFONO</a>
+                    <a class="browserExternal" href="https://entrega.com.mx/dom/r/diezcon.html?m=sucursal;su_id=35"><i class="icon-desktop"></i> EN LÍNEA</a>
+                </div>
+                <!-- <a href="tel:56162496"><i class="icon-phone-1"></i> 5616 2496</a> -->
+            </div>
+            <div class="sucursalPedido nomargen">
+                <h2>Lomas</h2>
+                <!-- <a href="tel:55403408"><i class="icon-phone-1"></i> 5540 3408</a> -->
+                <div class="doble">
+                    <a href="tel:5278 9910"><i class="icon-phone-1"></i> <span class="mbl">POR </span>TELÉFONO</a>
+                    <a class="browserExternal" href="https://entrega.com.mx/dom/r/diezcon.html?m=sucursal;su_id=37"><i class="icon-desktop"></i> EN LÍNEA</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- TABBAR app -->
+    <footer class="tabBar">
+        <nav>
+            <ul>
+                <li>
+                    <a class="" href="index.html" data-transition="slide-in" data-direction="reverse">
+                        <i class="i-carta"></i>
+                        <br>
+                        <label>Carta</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="" href="sucursales.html">
+                        <i class="i-map"></i>
+                        <label>Sucursales</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="selected" href="pedidos.html">
+                        <i class="i-phone"></i>
+                        <label>Pedidos</label>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="" href="mas.html" data-transition="slide-in">
+                        <i class="i-mas"></i>
+                        <label>Más</label>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

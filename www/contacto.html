@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>El 10</title>
+	<link href="css/mobipick.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript" src="js/eldiez.js"></script>
+	<!--<script type="text/javascript" src="js/mobipick.js"></script>-->
+</head>
+
+<body id="contactoPage">
+    <div class="screen">
+        <div></div>
+    </div>
+    <div class="wrapper">
+        <!-- NAVBAR back -->
+        <header class="navBar">
+            <h2 class="title">Contacto</h2>
+            <div class="leftBtns">
+                <a class="iconBtn" href="#" data-transition="slide" data-direction="reverse" onclick="history.go(-1);return false;">
+                    <i class="i-arrow-left"></i>
+                </a>
+            </div>
+            
+             <div class="rightBtns">
+                <a id="enviar" class="txt" href="#">Enviar </a>
+            </div>
+        </header>
+        
+        <div class="content" id="contacto">
+            <div class="whiteBk"></div>
+            <p>En el Diez estamos en constante mejoramiento. Es por eso que tus comentarios son sumamente importantes para nosotros.</p>
+            <p>Si tenés alguna sugerencia, queja, comentario, o solamente querés decir hola, escribenos.</p>
+            <p class="brand">¡Nos pondremos en contacto con vos a la brevedad!</p>
+
+            <form id="quejaycomen" novalidate>
+                <div class="inputCont notScrollonFocus">
+                    <input type="text" class="floatlabel notScrollonFocus" placeholder="Nombre" name="nombre" id="nombre"/>
+                    <label id="nombre-error" class="error" for="nombre"></label>
+                </div>
+                <div class="inputCont notScrollonFocus">
+                    <input type="email" class="floatlabel notScrollonFocus" placeholder="Mail" name="email" id="email"/>
+                    <label id="email-error" class="error" for="email"></label>
+                </div>
+                <div class="inputCont notScrollonFocus">
+                    <input type="number" class="floatlabel notScrollonFocus" placeholder="Celular" name="celular" id="celular"/>
+                </div>
+                <div class="inputCont notScrollonFocus">
+                    <label class="label left" id="miCumple">Cumpleaños</label>
+                    <input type="date" class="floatlabel notScrollonFocus" placeholder="Cumpelaños" name="cumple" id="cumple" required/>
+                </div>
+                <div class="inputCont notScrollonFocus">
+                    <label class="label right">Elige<i class="i-arrow-right"></i></label>
+                    <select class="floatlabel notScrollonFocus" name="sucursal" id="sucursal" data-icon="false" data-corners="false" data-shadow="false" required >
+                            <option disabled selected> Sucursal </option>
+                            <option>Condesa I</option>
+                            <option>Condesa II</option>
+                            <option>Clavería</option>
+                            <option>Lomas de Chapultepec</option>
+                            <option>Mundo E</option>
+                            <option>Polanco I</option>
+                            <option>Polanco II</option>
+                            <option>Roma</option>
+                            <option>Reforma</option>
+                            <option>San &Aacute;ngel</option>
+                            <option>Santa Fé</option>
+                            <option>Satélite</option>
+                    </select>
+                </div>
+                <div class="inputCont notScrollonFocus">
+                    <textarea class="floatlabel notScrollonFocus" rows="10" name="comentarios" id="comentarios" required >Mensaje</textarea>
+                    <label id="comentarios-error" class="error" for="comentarios"></label>
+                </div>
+            </form>
+            <div id="content_sendingMessage" class="statusMessage"></div>
+        </div>
+        <!-- TABBAR app -->
+        <footer class="tabBar">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="" href="index.html"  data-transition="slide-in" data-direction="reverse">
+                            <i class="i-carta"></i>
+                            <br>
+                            <label>Carta</label>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="" href="sucursales.html" data-transition="slide-in" data-direction="reverse">
+                            <i class="i-map"></i>
+                            <label>Sucursales</label>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="" href="pedidos.html">
+                            <i class="i-phone"></i>
+                            <label>Pedidos</label>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="selected" href="mas.html" data-transition="slide-in">
+                            <i class="i-mas"></i>
+                            <label>Más</label>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/eldiez.js"></script>
+        <title>El Diez</title>
+    </head>
+    <body>
+        <div class="screen">
+            <div></div>
+        </div>
+        <header class="navBar">
+            <h2 class="title">Carta</h2>
+            <div class="rightBtns toggleView">
+            <a class="iconBtn" id="verLista" data-transition="none">
+            <i class="i-lista"></i>
+            </a>
+            <a class="iconBtn selected" id="verGaleria" data-transition="none">
+            <i class="i-galeria"></i>
+            </a>
+            </div>
+        </header>
+
+    <section class="content galeria" id="carta">
+        <a class="item chico" href="item.html#vinos" data-transition="none">
+            <figure class="vinos">
+                <figcaption>
+                    <hr>
+                    Vinos
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#bebidas" data-transition="none">
+            <figure class="bar">
+                <figcaption>
+                    <hr>
+                    Bar
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item grande" href="item.html#pizzas" data-transition="none">
+            <figure class="pizzas">
+                <figcaption>
+                    <hr>
+                    Pizzas
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#empanadas" data-transition="none">
+            <figure class="empanadas">
+                <figcaption>
+                    <hr>
+                    Empanadas
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#sopas" data-transition="none">
+            <figure class="sopas">
+                <figcaption>
+                    <hr>
+                    Sopas
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item grande" href="item.html#pastas" data-transition="none">
+            <figure class="pastas">
+                <figcaption>
+                    <hr>
+                    Pastas
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#arracheras" data-transition="none">
+            <figure class="arracheras">
+                <figcaption>
+                    <hr>
+                    Arracheras Especiales
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#hamburguesas" data-transition="none">
+            <figure class="hamburguesas">
+                <figcaption>
+                    <hr>
+                    Hamburguesas al Carbón
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item grande" href="item.html#mar" data-transition="none">
+            <figure class="mar">
+                <figcaption>
+                    <hr>
+                    Parrilla de Mar
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#quesos" data-transition="none">
+            <figure class="quesos">
+                <figcaption>
+                    <hr>
+                    Quesos a la Parrilla
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#diezada" data-transition="none">
+            <figure class="diezada">
+                <figcaption>
+                    <hr>
+                    Árabe Diezada
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item grande" href="item.html#milangas" data-transition="none">
+            <figure  class="platillos">
+                <figcaption>
+                    <hr>
+                    Milangas
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#ensaladas" data-transition="none">
+            <figure class="ensaladas">
+                <figcaption>
+                    <hr>
+                    Ensaladas
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#guarniciones" data-transition="none">
+            <figure class="guarniciones">
+                <figcaption>
+                    <hr>
+                    Guarniciones
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item grande" href="item.html#cortes" data-transition="none">
+            <figure class="cortes">
+                <figcaption>
+                    <hr>
+                    Cortes del Asador
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#baguettes" data-transition="none">
+            <figure class="baguettes">
+                <figcaption>
+                    <hr>
+                    Baguettes
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#chorizo" data-transition="none">
+            <figure class="chorizo">
+                <figcaption>
+                    <hr>
+                    Chorizo Estilo Argentino
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#postres" data-transition="none">
+            <figure class="postres">
+                <figcaption>
+                    <hr>
+                    Postres
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+        <a class="item chico" href="item.html#cafeteria" data-transition="none">
+            <figure class="cafeteria">
+                <figcaption>
+                    <hr>
+                    Cafetería
+                    <hr>
+                </figcaption>
+            </figure>
+        </a>
+    </section>
+
+
+    <!-- TABBAR app -->
+        <footer class="tabBar">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="selected" href="index.html">
+                            <i class="i-carta"></i>
+                            <label>Carta</label>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="" href="sucursales.html" data-transition="none">
+                            <i class="i-map"></i>
+                            <label>Sucursales</label>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="" href="pedidos.html">
+                            <i class="i-phone"></i>
+                            <label>Pedidos</label>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="" href="mas.html" data-transition="none">
+                            <i class="i-mas"></i>
+                            <label>Más</label>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>

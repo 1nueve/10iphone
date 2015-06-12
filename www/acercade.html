@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>El 10</title>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/eldiez.js"></script>
+  </head>
+    <body>
+        <div class="screen">
+            <div></div>
+        </div>
+        <!-- NAVBAR back -->  
+        <header class="navBar">
+            <h2 class="title">Acerca de</h2>
+            <div class="leftBtns">
+                <a class="iconBtn" href="#" data-transition="slide" data-direction="reverse" onclick="history.go(-1);return false;"><i class="i-arrow-left"></i></a>
+            </div>
+        </header>       
+    	<section class="content" id="about">
+            <div class="whiteBk"></div>
+    		<img src="img/acerca-10logo.png">
+			<div class="text">
+				<p>
+					El Diez. Un restaurante distinguido para disfrutar el exquisito sabor argentino con su gran variedad de platillos, como hamburguesas caseras, cortes del asador, las arracheras especiales El 10 y la Diezada (pan árabe relleno de arrachera con queso), entre otros.
+					<br/><br/>
+					<strong>Nuestra filosofía:</strong> ofrecer siempre la mejor calidad, servicio y precio a los comensales que disfrutan de la gran variedad de platillos y sabores argentinos.
+				</p>
+                <hr>
+                <p>
+                    Diseño y desarrollo por <a class="browserExternal" href="http://godisruptive.com" style="color:inherit;">GODisruptive</a>
+                </p>
+			</div>
+    	</section>
+        <!-- TABBAR app -->  
+        <footer class="tabBar">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="" href="index.html" data-transition="slide-in" data-direction="reverse">
+                            <i class="i-carta"></i><br><label>Carta</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="sucursales.html" data-transition="slide-in" data-direction="reverse">
+                            <i class="i-map"></i><label>Sucursales</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="pedidos.html">
+                            <i class="i-phone"></i>
+                            <label>Pedidos</label>
+                        </a>
+                    </li>
+                    <li>    
+                        <a class="selected" href="mas.html" data-transition="slide-in">
+                            <i class="i-mas"></i><label>Más</label>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>
