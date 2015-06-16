@@ -1,6 +1,9 @@
 $(document).on("ready", switchPagina);
 function todasLasPaginas(url){
-    //StatusBar.overlaysWebView(false);
+   if(window.StatusBar) {
+      // org.apache.cordova.statusbar required
+      StatusBar.overlaysWebView(false);
+    }
 
     //cargar cualquier pagina desde el borde superior
 	$('html, body').scrollTop(0);
