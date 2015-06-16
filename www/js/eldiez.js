@@ -2,7 +2,7 @@ $(document).on("ready", switchPagina);
 function todasLasPaginas(url){
    if(window.StatusBar) {
     // org.apache.cordova.statusbar required
-        StatusBar.overlaysWebView(false);
+        StatusBar.backgroundColorByHexString("#1e1e1e");
         StatusBar.styleDefault();
     }
 
