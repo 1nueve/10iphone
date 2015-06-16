@@ -1,6 +1,6 @@
 $(document).on("ready", switchPagina);
 function todasLasPaginas(url){
-    StatusBar.overlaysWebView(false);
+    //StatusBar.overlaysWebView(false);
 
     //cargar cualquier pagina desde el borde superior
 	$('html, body').scrollTop(0);
